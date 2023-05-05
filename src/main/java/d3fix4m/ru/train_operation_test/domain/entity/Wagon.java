@@ -6,8 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.UUID;
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -15,16 +13,14 @@ import java.util.UUID;
 @Entity
 @Table(name = "wagons")
 public class Wagon {
-    // Номер вагона
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //Вес вагона
     @Column(nullable = false)
     private Long weight;
 
-    //Грузоподъемность вагона
     @Column(nullable = false)
     private Long capacity;
 }
